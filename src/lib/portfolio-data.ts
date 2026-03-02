@@ -52,6 +52,7 @@ type PortfolioData = {
   professionalExperience: ProfessionalExperience[];
   personalProjects: PersonalProject[];
   education: Education;
+  resumeUrl: string;
 };
 
 export const portfolioData: PortfolioData = {
@@ -62,8 +63,8 @@ export const portfolioData: PortfolioData = {
     phone: "+91 8825888437",
     location: "Coimbatore, Tamil Nadu, India",
     socials: {
-      linkedin: "#", // Replace with your LinkedIn profile URL
-      github: "#",   // Replace with your GitHub profile URL
+      linkedin: "https://www.linkedin.com/in/selvan23/",
+      github: "https://github.com/Selvan-S",
     },
   },
   professionalSummary: "Full Stack Developer with 1.5+ years of experience building scalable web applications using ASP.NET Core and React. Strong in RESTful API development, frontend state management, and database integration (MySQL, MongoDB). Experienced in Agile environments, production support, and delivering end-to-end features from development to deployment.",
@@ -104,8 +105,8 @@ export const portfolioData: PortfolioData = {
         "Integrated Stripe payment gateway for secure online transactions.",
         "Developed responsive UI using Tailwind CSS for cross-device compatibility.",
       ],
-      githubLink: "#",
-      liveDemoLink: null,
+      githubLink: "https://github.com/Selvan-S/zoomcar-clone-frontend",
+      liveDemoLink: "https://zoomcar-clone-selvan.netlify.app/",
       image: PlaceHolderImages.find(img => img.id === 'zoomcar-clone-image')!,
     },
     {
@@ -118,8 +119,8 @@ export const portfolioData: PortfolioData = {
         "Implemented form validation and protected routes.",
         "Built a responsive and clean user interface for improved usability.",
       ],
-      githubLink: "#",
-      liveDemoLink: null,
+      githubLink: "https://github.com/Selvan-S/todolistapp-frontend",
+      liveDemoLink: "https://2dolist-app.netlify.app/",
       image: PlaceHolderImages.find(img => img.id === 'todo-list-image')!,
     },
   ],
@@ -128,4 +129,5 @@ export const portfolioData: PortfolioData = {
     cgpa: "7.6",
     institution: "Akshaya College of Engineering and Technology, Coimbatore, TN, India",
   },
+  resumeUrl: "https://drive.google.com/file/d/1hY_KnUcDweX44-uaLEEWVlyCfA_pnuUd/view?usp=drive_link",
 };
