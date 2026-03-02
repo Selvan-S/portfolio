@@ -1,44 +1,6 @@
 'use server';
 
 import { z } from 'zod';
-import { refinePortfolioContentWithAI, RefinePortfolioContentInput } from '@/ai/flows/refine-portfolio-content-with-ai';
-
-// AI Refiner Action
-const refineContentSchema = z.object({
-  contentType: z.enum(['projectDescription', 'professionalSummary']),
-  originalContent: z.string().min(10, 'Please enter at least 10 characters.'),
-});
-
-export type AIFormState = {
-  message?: string | null;
-  refinedContent?: string | null;
-  errors?: {
-    contentType?: string[];
-    originalContent?: string[];
-  };
-};
-
-export async function refineContentAction(prevState: AIFormState, formData: FormData): Promise<AIFormState> {
-  const validatedFields = refineContentSchema.safeParse({
-    contentType: formData.get('contentType'),
-    originalContent: formData.get('originalContent'),
-  });
-
-  if (!validatedFields.success) {
-    return {
-      errors: validatedFields.error.flatten().fieldErrors,
-      message: 'Validation failed. Please check your input.',
-    };
-  }
-
-  try {
-    const { refinedContent } = await refinePortfolioContentWithAI(validatedFields.data as RefinePortfolioContentInput);
-    return { message: 'Content refined successfully!', refinedContent };
-  } catch (error) {
-    console.error(error);
-    return { message: 'An error occurred while refining content. Please try again.' };
-  }
-}
 
 // Contact Form Action
 const contactSchema = z.object({
