@@ -1,6 +1,10 @@
 'use server';
 
 import { z } from 'zod';
+import { Resend } from 'resend';
+import { portfolioData } from '@/lib/portfolio-data';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Contact Form Action
 const contactSchema = z.object({
@@ -34,9 +38,30 @@ export async function submitContactForm(prevState: ContactFormState, formData: F
     };
   }
 
+  const { name, email, message } = validatedFields.data;
+
   try {
-    // In a real app, you would send an email or save to a DB
-    console.log('New message received:', validatedFields.data);
+    const { data, error } = await resend.emails.send({
+        from: 'Portfolio Contact Form <onboarding@resend.dev>',
+        to: portfolioData.contact.email,
+        subject: `New message from ${name}`,
+        reply_to: email,
+        html: `<p>You have received a new message from your portfolio contact form.</p>
+               <p><strong>Name:</strong> ${name}</p>
+               <p><strong>Email:</strong> ${email}</p>
+               <p><strong>Message:</strong></p>
+               <p>${message}</p>`,
+      });
+  
+      if (error) {
+        console.error('Resend error:', error);
+        return {
+          status: 'error',
+          message: 'Something went wrong while sending the email. Please try again.',
+        };
+      }
+
+    console.log('New message sent via Resend:', validatedFields.data);
     return {
       status: 'success',
       message: 'Thank you for your message! I will get back to you soon.',

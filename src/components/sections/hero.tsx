@@ -1,10 +1,10 @@
 import { portfolioData } from "@/lib/portfolio-data";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
-  const { name, title, professionalSummary, contact } = portfolioData;
+  const { name, title, professionalSummary, contact, resumeUrl } = portfolioData;
 
   return (
     <section id="hero" className="py-24 sm:py-32">
@@ -22,6 +22,9 @@ export function Hero() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button asChild>
               <Link href="#contact">Contact Me</Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link href={resumeUrl} target="_blank" rel="noopener noreferrer">My Resume</Link>
             </Button>
             <Button variant="outline" asChild>
               <Link href="#projects">My Work</Link>

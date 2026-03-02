@@ -1,10 +1,11 @@
 'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
 import { Logo } from './logo';
+import { portfolioData } from '@/lib/portfolio-data';
 
 const navLinks = [
     { href: '#skills', label: 'Skills' },
@@ -24,6 +25,9 @@ export function Header() {
                             {link.label}
                         </Link>
                     ))}
+                    <Link href={portfolioData.resumeUrl} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">
+                        Resume
+                    </Link>
                 </nav>
                 <Sheet>
                     <SheetTrigger asChild>
@@ -48,6 +52,16 @@ export function Header() {
                                         </Link>
                                     </SheetClose>
                                 ))}
+                                <SheetClose asChild>
+                                    <Link
+                                        href={portfolioData.resumeUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-lg transition-colors hover:text-primary"
+                                    >
+                                        Resume
+                                    </Link>
+                                </SheetClose>
                             </nav>
                         </div>
                     </SheetContent>
