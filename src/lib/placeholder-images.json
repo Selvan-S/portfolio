@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "zoomcar-clone-image",
+      "description": "A placeholder image for the Zoomcar Clone project.",
+      "imageUrl": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjYXIlMjByZW50YWx8ZW58MHx8fHwxNzcyNDY0MTcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car rental"
+    },
+    {
+      "id": "todo-list-image",
+      "description": "A placeholder image for the Todo List Application project.",
+      "imageUrl": "https://images.unsplash.com/photo-1700561306724-b3723282ce5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0YXNrJTIwbGlzdHxlbnwwfHx8fDE3NzI0NjQxNzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "task list"
+    }
+  ]
 }
