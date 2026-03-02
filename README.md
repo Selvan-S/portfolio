@@ -1,19 +1,38 @@
 # Personal Portfolio
 
-[Live Website](https://your-live-website-url.com)
+[Live Website](https://selvans.netlify.app)
 
-![Portfolio Screenshot](https://placehold.co/800x600?text=Your+Portfolio+Screenshot)
+## 📷 Preview
+
+[![Portfolio Preview](docs/preview.png)](https://selvans.netlify.app)
 
 This is a personal portfolio website built with Next.js, React, and Tailwind CSS. It's designed to showcase my skills, professional experience, and personal projects in a clean and modern interface.
 
 ## 🚀 Features
 
-- **Blazing Fast**: Built with Next.js for static site generation and optimal performance.
-- **Responsive Design**: Fully responsive layout that works on all devices.
-- **Modern Tech Stack**: Utilizes the latest web development technologies.
-- **Project Showcase**: A dedicated section for projects with links to live demos and source code.
-- **Experience Timeline**: A chronological overview of my professional journey.
-- **Contact Form**: A working contact form powered by Resend to ensure messages are delivered.
+- **Responsive Design**  
+  The website is fully responsive and adapts to different screen sizes including desktop, tablet, and mobile devices.
+
+- **Project Showcase**  
+  Displays selected projects with descriptions, technology stacks, and links to GitHub repositories and live demos.
+
+- **Skills & Technology Section**  
+  Highlights the programming languages, frameworks, and tools I work with.
+
+- **Experience Timeline**  
+  Presents my professional experience and development journey in a structured timeline format.
+
+- **Contact Form Integration**  
+  Includes a functional contact form powered by Resend for sending messages directly from the website.
+
+- **Optimized Performance**  
+  Built with Next.js to take advantage of modern performance optimizations such as static generation and fast page loading.
+
+- **Modern UI Components**  
+  Uses ShadCN UI components and Tailwind CSS for a clean, consistent, and modern interface.
+
+- **Developer-Friendly Codebase**  
+  Organized folder structure and TypeScript support for maintainability and scalability.
 
 ## 🛠️ Tech Stack
 
