@@ -1,5 +1,9 @@
 # Personal Portfolio
 
+[Live Website](https://your-live-website-url.com)
+
+![Portfolio Screenshot](https://placehold.co/800x600?text=Your+Portfolio+Screenshot)
+
 This is a personal portfolio website built with Next.js, React, and Tailwind CSS. It's designed to showcase my skills, professional experience, and personal projects in a clean and modern interface.
 
 ## 🚀 Features
@@ -55,3 +59,13 @@ Follow these instructions to set up the project locally.
 ## Deployment
 
 This project is configured for deployment on Netlify. The `netlify.toml` file in the root directory contains the necessary build settings. Simply connect your Git repository to Netlify for automatic deployments.
+
+## ✒️ Author
+
+- **Selvan S**
+- **GitHub**: [@Selvan-S](https://github.com/Selvan-S)
+- **LinkedIn**: [selvan23](https://www.linkedin.com/in/selvan23/)
+
+## 📄 License
+
+This project is licensed under the MIT License.
