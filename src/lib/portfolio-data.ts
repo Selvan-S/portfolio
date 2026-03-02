@@ -82,7 +82,7 @@ export const portfolioData: PortfolioData = {
       company: "DevBee INC",
       location: "Coimbatore, India",
       role: "Software Developer",
-      duration: "Sep 2022 – Present",
+      duration: "Jul 2024 – Present",
       achievements: [
         "Developed and enhanced 6+ production-ready frontend modules using React (TypeScript, Redux), ensuring responsive and reusable component architecture.",
         "Designed and implemented RESTful APIs using ASP.NET Core to support business workflows and data validation.",
