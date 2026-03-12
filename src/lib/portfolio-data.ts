@@ -71,7 +71,7 @@ export const portfolioData: PortfolioData = {
   technicalSkills: [
     { category: "Languages", skills: ["C#", "JavaScript (ES6+)", "TypeScript"] },
     { category: "Frontend", skills: ["React", "Redux", "HTML5", "CSS3", "Tailwind CSS"] },
-    { category: "Backend", skills: ["ASP.NET Core Web API", "Node.js (Basic)", "Express.js"] },
+    { category: "Backend", skills: ["ASP.NET Core Web API", "Node.js", "Express.js"] },
     { category: "API & Security", skills: ["RESTful APIs", "JWT Authentication", "Role-Based Access Control (RBAC)"] },
     { category: "Databases", skills: ["MySQL", "MongoDB"] },
     { category: "Tools", skills: ["Git", "GitHub", "Postman"] },
