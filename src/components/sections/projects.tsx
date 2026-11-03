@@ -20,11 +20,11 @@ export function Projects() {
             A selection of projects I've built.
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {personalProjects.map((project) => (
             <Card key={project.id} className="flex flex-col">
               <CardHeader>
-                <div className="aspect-[3/2] w-full overflow-hidden rounded-md mb-4 border">
+                <div className="aspect-video w-full overflow-hidden rounded-md mb-4 border bg-muted/40">
                   <Image
                     src={project.image.imageUrl}
                     alt={project.title}
@@ -37,19 +37,33 @@ export function Projects() {
                 <CardTitle className="text-xl">{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {project.techStack.map((tech) => (
-                    <Badge key={tech} variant="outline">{tech}</Badge>
-                  ))}
+              <CardContent className="flex-grow flex flex-col justify-between space-y-4">
+                <div>
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    {project.techStack.map((tech) => (
+                      <Badge key={tech} variant="outline">{tech}</Badge>
+                    ))}
+                  </div>
+                  {project.achievements && project.achievements.length > 0 && (
+                    <ul className="space-y-1.5 text-xs text-muted-foreground">
+                      {project.achievements.map((item, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <span className="mr-2 text-primary font-bold leading-4">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </CardContent>
               <div className="flex gap-2 p-6 pt-0">
-                <Button variant="outline" asChild>
-                  <Link href={project.githubLink} target="_blank">
-                    <Github className="mr-2" /> GitHub
-                  </Link>
-                </Button>
+                {project.githubLink && (
+                  <Button variant="outline" asChild>
+                    <Link href={project.githubLink} target="_blank">
+                      <Github className="mr-2" /> GitHub
+                    </Link>
+                  </Button>
+                )}
                 {project.liveDemoLink && (
                   <Button asChild>
                     <Link href={project.liveDemoLink} target="_blank">
