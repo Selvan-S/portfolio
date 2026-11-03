@@ -69,12 +69,13 @@ export const portfolioData: PortfolioData = {
   },
   professionalSummary: "Full Stack Developer with 1.5+ years of experience building scalable web applications using ASP.NET Core and React. Strong in RESTful API development, frontend state management, and database integration (MySQL, MongoDB). Experienced in Agile environments, production support, and delivering end-to-end features from development to deployment.",
   technicalSkills: [
-    { category: "Languages", skills: ["C#", "JavaScript (ES6+)", "TypeScript"] },
+    { category: "Languages", skills: ["C#", "JavaScript (ES6+)", "TypeScript", "Python"] },
     { category: "Frontend", skills: ["React", "Redux", "HTML5", "CSS3", "Tailwind CSS"] },
     { category: "Backend", skills: ["ASP.NET Core Web API", "Node.js", "Express.js"] },
+    { category: "AI & Vector Search", skills: ["LangGraph", "LangChain", "Agentic RAG", "ChromaDB", "HuggingFace", "Vector Databases"] },
     { category: "API & Security", skills: ["RESTful APIs", "JWT Authentication", "Role-Based Access Control (RBAC)"] },
-    { category: "Databases", skills: ["MySQL", "MongoDB"] },
-    { category: "Tools", skills: ["Git", "GitHub", "Postman"] },
+    { category: "Databases", skills: ["PostgreSQL (Supabase)", "MySQL", "MongoDB", "ChromaDB"] },
+    { category: "Tools", skills: ["Git", "GitHub", "Postman", "Streamlit", "Groq"] },
     { category: "Practices", skills: ["Agile/Scrum", "Debugging", "Production Support"] },
   ],
   professionalExperience: [
@@ -94,6 +95,31 @@ export const portfolioData: PortfolioData = {
     },
   ],
   personalProjects: [
+    {
+      id: "ai-shopping-agent",
+      title: "Multimodal AI Shopping Agent – Agentic RAG Application",
+      description: "An autonomous AI shopping assistant orchestrating semantic search, visual discovery, review analysis, and guardrailed order checkout.",
+      techStack: [
+        "Python",
+        "LangGraph",
+        "LangChain",
+        "ChromaDB",
+        "Groq",
+        "Streamlit",
+        "Supabase",
+        "HuggingFace",
+      ],
+      achievements: [
+        "Architected an Agentic RAG pipeline using LangGraph to orchestrate semantic product search, sentiment-aware review lookup, and transactional checkout.",
+        "Embedded a Supabase PostgreSQL product catalog using HuggingFace sentence-transformers into a persistent ChromaDB vector store for accurate semantic retrieval.",
+        "Integrated a multimodal image-search tool powered by Groq vision models, allowing users to find matching catalog products directly from uploaded photos.",
+        "Implemented transactional guardrails to validate user intent and resolve catalog item IDs, blocking invalid checkout requests prior to database commits.",
+        "Engineered an interactive conversational UI with Streamlit supporting persistent chat history and image upload; deployed to Streamlit Community Cloud.",
+      ],
+      githubLink: "https://github.com/Selvan-S/agentic-ai-learning/tree/main/5_project_shopping_agent",
+      liveDemoLink: "https://selvan-shopping-agent.streamlit.app/",
+      image: PlaceHolderImages.find(img => img.id === 'ai-shopping-agent-image')!,
+    },
     {
       id: "zoomcar-clone",
       title: "Zoomcar Clone – Full Stack Car Rental Platform",
